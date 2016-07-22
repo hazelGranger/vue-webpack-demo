@@ -7,7 +7,8 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
 	history: true,
-	saveScrollPosition: true
+	saveScrollPosition: true,
+	hashbang: true
 })
 
 configRouter(router)

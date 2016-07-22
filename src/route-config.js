@@ -1,19 +1,24 @@
+import Hello from 'Hello'
+import About from 'about'
+import Help from 'help'
+import NotFound from '404'
+
 export function configRouter (router){
 	router.map({
 		'/': {
-			component: require('./components/Hello.vue')
+			component: Hello
 		},
 		'/index': {
-			component: require('./components/Hello.vue')
+			component: Hello
 		},
 		'/about': {
-			component: require('./components/about.vue')
+			component: About
 		},
 		'/help': {
-			component: require('./components/help.vue')
+			component: Help
 		},
 		'*': {
-			component: require('./components/404.vue')
+			component: NotFound
 		}
 	})
 

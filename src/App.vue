@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <navheader></navheader>
     <a v-link="{path: '/'}">
       <img class="logo" src="./assets/logo.png">
     </a>
@@ -61,4 +62,20 @@ body {
   width: 100px;
   height: 100px
 }
+.view {
+  transition: all .5s ease;
+}
+.test-enter, .test-leave {
+  opacity: 0;
+  transform: scale(2);
+}
 </style>
+<script>
+  import navheader from 'header'
+  export default{
+      components: {
+        navheader
+      }
+  }
+</script>
+

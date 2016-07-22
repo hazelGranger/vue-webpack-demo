@@ -13,12 +13,19 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
+    //此处决定了import 可以引入的模块，一些缩写可以在此处查找
+    root: [
+      path.resolve(__dirname, '../src/components'),
+      path.resolve(__dirname, '../src/views')
+    ],
     extensions: ['', '.js', '.vue'],
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
-      'src': path.resolve(__dirname, '../src'),
-      'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components')
+      'settings': path.resolve(__dirname,'../src/settings.js')
+      // 'src': path.resolve(__dirname, '../src'),
+      // 'assets': path.resolve(__dirname, '../src/assets'),
+      // 'components': path.resolve(__dirname, '../src/components')
+      //'views': path.resolve(__dirname,'../src/views')
     }
   },
   resolveLoader: {
